@@ -1,0 +1,54 @@
+Key Points 
+----------
+
+1. 2nd Largest Food and Beverage Business, Revenue of $49.3 billion 
+    - Apps is Highly Business critical and Revenue Generating, 0 downtime. 
+2. Companies products distributed across 200+ countries 
+    - Apps are global and require less latency and resilience. 
+3. Migration strategy 
+
+- PHASE I - Lift & Shift 
+
+    - Planning.
+           - Creating Complete Inventory of Apps & INfra & Datacenters ? 
+           - Understanding Agility and Flexibility ? 
+           - Legal regulatory compliance requirements. ?
+           - what is the budget/ TCO ? - TCO Calculator. ?
+           - Approach - Whether Lift and shift or to refactor ?
+           - Since Apps are business critical and Revenue Generating - Planning for BCP/DR ? 
+           - Cloud Security ? - Infrastructure/Data/Applications/Network
+           - what are the cloud infra requirements ? 
+           - Cloud Staffing , support and maintainence. ? 
+           - Observability, APM & Monitoring ?  
+           - Type of connectivity, End user access, Authentication, Authorization etc. 
+           - Gartner Research views. 
+    - Choosing services required in cloud. 
+           - Deployment models - Public/Private/Hybrid Cloud. 
+             Service Models - IAAS/PAAS/SAAS
+           - Cloud Provider - Azure/AWS/GCP etc. 
+           - Cost estimate 
+           - Deployment and Automation. 
+           - Monitoring and security. 
+           - Integration requirements & services. 
+           - Migration tools
+           - Cloud Policies and compliance 
+
+    - Migrating apps and data.  
+           - Lift and shift - Connect with Hypervizor (VMWare/Hyper-V)
+           - Database - Connect to the DMS. 
+           - Storage - Storage gateways
+           - Perform Test Migration/ Replication - POC.  
+           - Validate Replication
+           - Actual Migration 
+           - Planning for Go-Live. 
+    - Validation after migration is done. 
+           - UAT - Validating Apps/Access/Authentication/Authorization/Network access. 
+           - Integration testing 
+           - DAST/Pen testing. 
+           - Support 
+
+- PHASE II - Modernize, Refactor & Redesign. 
+    - Discover.  
+    - Strategize.  
+    - Cloud Adoption Framework. 
+
