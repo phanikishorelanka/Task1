@@ -1,31 +1,25 @@
 node {
     deleteDir()
     try {
-        stage ('Code Checkout') {             
+        stage ('Git hub Code Checkout') {             
                 sh '''
-                   rm -rf $WORKSPACE/github/
                    mkdir -p $WORKSPACE/github/
                    cd $WORKSPACE/github
-                   git clone https://github.com/pklanka2/simpleapp.git
-				   exit 0
+                   git clone https://github.com/phanikishorelanka/Task1.git
                 '''
         echo 'Code Checkout Complete'
         }
-     stage ('Creating builds ') {
+     stage ('Terraform Init & Plan') {
          sh '''
-         cd $WORKSPACE/github/simpleapp/
-         zip -9 -r azenta.zip azenta/         
-		 exit 0
-        '''
+         cd $WORKSPACE/github/Task1/Automation/web_server_tf/
+         terraform init
+         terraform plan       
+		       '''
        } 
-     stage ('Deploying Generated Builds') {
+     stage ('Terraform apply') {
          sh '''
-         cd $WORKSPACE/github/simpleapp
-         cp -pr azenta.zip /u01/tomcat/webapps/
-         cd /u01/tomcat/webapps/
-         unzip azenta.zip 
-         echo Deploying Build COmplete
-		 exit 0
+         cd $WORKSPACE/github/Task1/Automation/web_server_tf/
+         terraform apply -autoapprove
         '''
        }
     
