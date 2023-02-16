@@ -20,6 +20,7 @@ variable "environment" {
 }
 
 locals {
+  state_file_name = "${var.environment}.tfstate"
   common_tags = {
     environment = var.environment
   }
